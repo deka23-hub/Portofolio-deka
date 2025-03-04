@@ -1,0 +1,169 @@
+/* --- Reset dan Pengaturan Dasar --- */
+body {
+    font-family: 'Poppins', sans-serif; /* Mengatur font utama */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+    background-color: #1a1a1a; /* Warna latar belakang utama */
+    color: white; /* Warna teks utama */
+}
+
+/* --- Navbar --- */
+header {
+    background-color: #181818; /* Warna latar belakang navbar */
+    padding: 15px 50px; /* Memberikan ruang di dalam header */
+    display: flex;
+    justify-content: flex-end; /* Menempatkan navbar ke kanan */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+}
+nav ul {
+    list-style: none; /* Menghilangkan bullet list */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 15px; /* Jarak antar item navbar */
+}
+nav ul li a {
+    color: white; /* Warna teks link navbar */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Efek transisi warna */
+}
+nav ul li a:hover {
+    color: #1f0c64; /* Warna saat hover */
+}
+
+/* --- Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh; /* Tinggi hero section */
+    padding: 0 10%; /* Padding di kiri dan kanan */
+    flex-wrap: wrap; /* Memastikan responsif jika layar kecil */
+}
+.hero-text {
+    max-width: 500px; /* Membatasi lebar teks hero */
+}
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+.hero-text h1 span {
+    color: #11088d; /* Warna aksen pada judul */
+}
+.hero-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #b3b3b3; /* Warna teks sekunder */
+}
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #d9d9d9; /* Warna teks paragraf */
+}
+
+/* --- Button Styling --- */
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #07169c, #052b68); /* Gradasi warna tombol */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; /* Membulatkan sudut tombol */
+    box-shadow: 0px 5px 10px rgba(255, 204, 0, 0.3); /* Efek bayangan */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efek animasi hover */
+    margin-top: 30px;
+    text-decoration: none;
+}
+.btn:hover {
+    transform: translateY(-3px); /* Mengangkat tombol saat hover */
+    box-shadow: 0px 10px 20px rgba(255, 136, 0, 0.5); /* Bayangan lebih besar saat hover */
+}
+
+/* --- Hero Image --- */
+.hero-image img {
+    width: 350px; /* Ukuran gambar hero */
+    border-radius: 10px; /* Membuat sudut gambar membulat */
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1); /* Efek bayangan */
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 50px 10%;
+    }
+    .hero-image img {
+        width: 280px;
+        margin-top: 20px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+    header {
+        justify-content: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #181818; /* Warna latar belakang footer */
+    text-align: center;
+}
+.footer-container {
+    max-width: 600px;
+    margin: auto;
+}
+.footer-container p {
+    color: #b3b3b3; /* Warna teks footer */
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Jarak antar ikon */
+    margin-top: 10px;
+}
+.footer-social a {
+    color: white;
+    font-size: 1.8rem;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+.footer-social a.github {
+    background-color: #333;
+}
+.footer-social a.linkedin {
+    background-color: #0077b5;
+}
+.footer-social a.whatsapp {
+    background-color: #25D366;
+}
+.footer-social a.instagram {
+    background-color: #E1306C;
+}
+.footer-social a:hover {
+    transform: scale(1.2); /* Memperbesar ikon saat hover */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Efek cahaya */
+}
